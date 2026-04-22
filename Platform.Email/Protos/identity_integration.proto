@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package identityintegration;
+
+import "Common/common.proto";
+
+option csharp_namespace = "Platform.Identity.Grpc";
+
+service IdentityIntegration {
+  rpc GetUserEmailProfile (GetUserEmailProfileRequest) returns (GetUserEmailProfileResponse);
+}
+
+message GetUserEmailProfileRequest {
+  string user_id = 1;
+}
+
+message GetUserEmailProfileResponse {
+  common.ResponseStatus status = 1;
+  GetUserEmailProfileData data = 2;
+}
+
+message GetUserEmailProfileData {
+  string id = 1;
+  string identity_id = 2;
+  string user_name = 3;
+  string email = 4;
+}
