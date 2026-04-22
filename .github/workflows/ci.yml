@@ -7,5 +7,7 @@ on:
 jobs:
   build:
     uses: Platform-System/Platform.CI-CD/.github/workflows/dotnet-build-template.yml@main
+    secrets: inherit
     with:
       project_path: 'Platform.Email.slnx'
+      dependencies: 'Platform-System/Platform.Contracts,Platform-System/Platform.Messaging'
