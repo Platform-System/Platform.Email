@@ -1,4 +1,4 @@
-name: Platform.Email CI
+name: Email CI
 
 on:
   push:
