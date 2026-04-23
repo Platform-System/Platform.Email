@@ -1,4 +1,4 @@
-name: Email CI
+name: CI
 
 on:
   push:
@@ -11,3 +11,4 @@ jobs:
     with:
       project_path: 'Platform.Email.slnx'
       dependencies: 'Platform-System/Platform.Contracts,Platform-System/Platform.Messaging'
+
