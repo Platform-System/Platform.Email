@@ -1,5 +1,9 @@
 name: CI
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   push:
     branches: [ main ]
@@ -11,5 +15,6 @@ jobs:
     with:
       project_path: 'Platform.Email.slnx'
       dependencies: 'Platform-System/Platform.Contracts,Platform-System/Platform.Messaging'
-
+
+
 
