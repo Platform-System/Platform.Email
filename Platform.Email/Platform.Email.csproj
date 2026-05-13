@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\identity_integration.proto" GrpcServices="Client" AdditionalImportDirs="..\..\Platform.Contracts\Protos" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Platform.Contracts\Platform.Contracts.csproj" />
     <ProjectReference Include="..\..\Platform.Messaging\Platform.Messaging.csproj" />
   </ItemGroup>
