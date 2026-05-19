@@ -32,6 +32,8 @@ public static class DependencyInjection
             var identityOptions = sp.GetRequiredService<IOptions<IdentityGrpcOptions>>().Value;
             options.Address = new Uri(identityOptions.BaseUrl.TrimEnd('/'));
         });
+        services.AddScoped(sp => sp.GetRequiredService<IOptions<SendGridOptions>>().Value);
+        services.AddScoped<ISendGridClientAdapter, SendGridClientAdapter>();
         services.AddScoped<IIdentityUserClient, IdentityUserClient>();
         services.AddScoped<IEmailService, SendGridEmailService>();
 
